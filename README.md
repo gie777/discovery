@@ -10,13 +10,23 @@ Discovery is a based service that is production-ready and primarily used at [Bil
 ### env
 
 `go1.9.x` (and later)
-
 ### build
+```
+export GO111MODULE=on
+go get -u -v github.com/bilibili/discovery
+cd $GOPATH/src/github.com/bilibili/discovery/cmd/discovery
+go build
+mv main discovery
+```
+or
 ```shell
-cd $GOPATH/src
+//GO111MODULE必须开启
+export GO111MODULE=on
+cd $GOPATH/src/github.com/bilibili/
 git clone https://github.com/bilibili/discovery.git
 cd discovery/cmd/discovery
 go build
+mv main discovery
 ```
 
 ### run
